@@ -29,19 +29,19 @@ class TabbedView extends Component {
 
   renderScene(navigationState, index) {
     const isSelected = index === this.props.navigationState.index;
+    if (!isSelected) {
+      return null;
+    }
     return (
       <View
         key={navigationState.key}
-        pointerEvents={isSelected ? 'auto' : 'none'}
-        removeClippedSubviews={!isSelected}
+        pointerEvents={'auto'}
+        removeClippedSubviews={false}
         style={[
           styles.scene,
-          { opacity: isSelected ? 1 : 0 },
         ]}
       >
-        <StaticContainer shouldUpdate={isSelected}>
-          {this.props.renderScene(navigationState, index)}
-        </StaticContainer>
+        {this.props.renderScene(navigationState, index)}
       </View>
     );
   }
