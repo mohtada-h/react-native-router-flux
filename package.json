@@ -39,7 +39,7 @@
     "babel-plugin-transform-remove-console": "^6.8.5",
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.6.0",
-    "react-native-experimental-navigation": "^0.29.1",
+    "react-native-experimental-navigation": "git+https://github.com/mohtada-h/react-native-experimental-navigation.git",
     "react-native-tabs": "^1.0.9",
     "react-static-container": "^1.0.2"
   },
